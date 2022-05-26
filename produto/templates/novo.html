@@ -1,0 +1,17 @@
+{% extends 'base.html '%}
+
+{% block product %}
+    <h2>Novo Produto</h2>
+    <form action="{% url 'produto:novo' %}" method="post">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="field">
+            <label for="" class="label">{{ field.label }}</label>
+            <div class="control">
+                {{ field }}
+            </div>
+        </div>
+        {% endfor %}
+        <button type="submit" >Salvar</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,6 @@
+{% extends 'base.html' %}
+
+{% block product %}
+<h1>{{ mensagem }}</h1>
+<a href="{% url 'produto:novo' %}">Novo Produto</a>
+{% endblock %}
